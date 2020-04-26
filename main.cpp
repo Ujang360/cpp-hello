@@ -13,18 +13,25 @@ class Employee : public Person {
 };
 
 class Manager {
-    Person &employee;
+    Person& employee;
 
   public:
-    Manager(Person &employee_candidate)
+    Manager(Person& employee_candidate)
         : employee(employee_candidate) {}
+
     void make_employee_say_something() {
         employee.say_something();
+    }
+
+    Employee get_employee() {
+        return dynamic_cast<Employee&>(employee);
     }
 };
 
 int main(void) {
     Manager manager = Manager(*(new Employee()));
     manager.make_employee_say_something();
+    Employee borrowed_employee = manager.get_employee();
+    borrowed_employee.say_something();
     return 0;
 }

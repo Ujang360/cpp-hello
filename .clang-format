@@ -43,7 +43,7 @@ IndentWrappedFunctionNames: true
 KeepEmptyLinesAtTheStartOfBlocks: false
 MaxEmptyLinesToKeep: 1
 NamespaceIndentation: All
-PointerAlignment: Right
+PointerAlignment: Left
 SortIncludes: true
 SortUsingDeclarations: true
 SpaceAfterCStyleCast: false
